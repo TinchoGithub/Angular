@@ -1,0 +1,15 @@
+<div *ngIf="isLoading">
+    ...Cargando
+</div>
+
+<div *ngIf=" !isLoading">
+    <div *ngFor="let libro of libros" >
+        <h4>{{libro.title}} </h4>
+        <img src={{libro.cover}}>
+        <h4>Descargar --> {{libro.url_download}}</h4>
+        <button routerLink="libros/{{libro.ID}}" >Mas Informacion</button>
+        
+    </div>
+</div>
+
+

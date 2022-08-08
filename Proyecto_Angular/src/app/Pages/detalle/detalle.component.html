@@ -1,0 +1,18 @@
+<div *ngIf="isLoading">
+    ...Cargando
+
+</div>
+
+
+<div *ngIf="!isLoading && !isError">
+    <div *ngFor="let libro of libro" >
+        <h1>Detalle del Libro</h1>
+        <h4>{{libro.title}}</h4>
+        <img src={{libro.cover}}>
+        <p>Autor: {{libro.author}}</p>
+        <p>Publicado: {{libro.publisher}} | {{libro.publisher_date}}</p>
+        <p>Total de pag: {{libro.pages}}</p>
+        <p>Lenguaje: {{libro.language}}</p>
+        <p>Descripcion:<br><br>{{libro.content}}</p>
+    </div>
+</div>
